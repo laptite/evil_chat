@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title EvilChat
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all'
+  %body
+    = yield
+    = javascript_pack_tag 'application'
