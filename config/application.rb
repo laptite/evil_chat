@@ -41,6 +41,7 @@ module EvilChat
       # Don't generate tests and helpers (for this tutorial)
       g.test_framework = nil
       g.helper = nil
+      g.template_engine = :haml
     end
   end
 end
