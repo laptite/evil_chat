@@ -18,7 +18,6 @@ require "action_cable/engine"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
 module EvilChat
   class Application < Rails::Application
     config.i18n.load_path += Dir[config.root.join('frontend/components/**/*.yml')]
@@ -33,7 +32,11 @@ module EvilChat
 
     # Don't generate system test files.
     # config.generators.system_tests = nil
-
+    
+    # Disabling zeitwerk to fix wrong constant name with Rails 6 
+    # This happens with hyphenated components e.g. auth-form
+    config.autoloader = :classic
+    
     config.generators do |g|
       # Don't generate assets for Sprockets
       g.assets = nil
