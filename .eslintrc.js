@@ -17,5 +17,9 @@ module.exports = {
         }
       }
     }
+  },
+
+  rules: {
+    "object-shorthand": ["error", "always", { avoidQuotes: true }]
   }
 };
