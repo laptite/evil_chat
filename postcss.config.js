@@ -1,7 +1,6 @@
 const cssVar = require("./frontend/config/variables");
 
 module.exports = {
-  parser: "sugarss",
   plugins: {
     "postcss-import": {},
     "postcss-flexbugs-fixes": {},
