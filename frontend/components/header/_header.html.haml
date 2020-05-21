@@ -1,0 +1,24 @@
+%header{ class: "header" }
+  %nav.navbar.navbar-expand-lg
+    .navbar-brand Evil Chat
+    %button.navbar-toggler{ "aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", type: "button" }
+      %span.navbar-toggler-icon
+
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.active
+          = link_to '#', class: 'nav-link' do
+            Home
+            %span.sr-only (current)
+        %li.nav-item
+          = link_to 'Link', '#', class: 'nav-link'
+        %li.nav-item.dropdown
+          = link_to 'Dropdown', '#', id: 'navbarDropdown', class: 'nav-link dropdown-toggle', aria: { expanded: false, haspopup: true }, data: { toggle: 'dropdown' }, role: 'button'
+          .dropdown-menu{ "aria-labelledby" => "navbarDropdown" }
+            %a.dropdown-item= link_to 'Action', '#'
+            %a.dropdown-item= link_to 'Another Action', '#'
+            .dropdown-divider
+            %a.dropdown-item= link_to 'Some Other Action', '#'
+      %form.form-inline.my-2.my-lg-0
+        %input.form-control.mr-sm-2{ "aria-label" => "Search", placeholder: "Search", type: "search" }
+        %button.btn.btn-outline-success.my-2.my-sm-0{ type: "submit" } Search
