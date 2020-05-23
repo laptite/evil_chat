@@ -10,6 +10,7 @@ gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'komponent', '~> 2.2'
 gem 'haml', '~> 5.1'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

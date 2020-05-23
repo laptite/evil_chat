@@ -39,5 +39,6 @@ module.exports = {
   desktopWide: "1600px",
   desktop1800: "1800px",
 
+  navHeight: "56px",
   "minimized-header-height": "72px"
 };

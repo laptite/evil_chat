@@ -1,15 +1,11 @@
 %header{ class: "header" }
-  %nav.navbar.navbar-expand-lg
-    .navbar-brand Evil Chat
+  %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    = link_to 'Evil Chat', root_path, class: 'navbar-brand'
     %button.navbar-toggler{ "aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", type: "button" }
       %span.navbar-toggler-icon
 
     #navbarSupportedContent.collapse.navbar-collapse
       %ul.navbar-nav.mr-auto
-        %li.nav-item.active
-          = link_to '#', class: 'nav-link' do
-            Home
-            %span.sr-only (current)
         %li.nav-item
           = link_to 'Link', '#', class: 'nav-link'
         %li.nav-item.dropdown
