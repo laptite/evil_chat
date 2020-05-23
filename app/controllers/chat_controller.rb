@@ -1,5 +1,6 @@
 class ChatController < ApplicationController
-  before_action :authenticate!
+  # before_action :authenticate!
+  before_action :authenticate_user!
 
   def show
     @messages = Message.order(created_at: :asc).last(20)
@@ -7,7 +8,7 @@ class ChatController < ApplicationController
 
   private
 
-  def authenticate!
-    redirect_to login_path unless session[:username]
-  end
+  # def authenticate!
+  #   redirect_to login_path unless session[:username]
+  # end
 end

@@ -1,0 +1,71 @@
+.devise {
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 56px);
+    width: 700px;
+    @media (max-width: 700px) { width: 100%; }
+  }
+
+  form, 
+  .devise-links {
+    min-width: 300px;
+    @media (max-width: 400px) { width: 90%; }
+  }
+
+  .devise-links > a {
+    text-decoration: none;
+  }
+
+  .field { margin-bottom: 0.5rem; }
+  .remember_me { 
+    text-align: right; 
+    font-size: 14px;
+  }
+
+  .actions {
+    margin-bottom: 6px;
+  }
+
+  label { margin-bottom: 0; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: border-color 150ms;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus { border: 1px solid #3f94f9; }
+  }
+
+  input[placeholder] {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-size: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 0;
+    background: #3f94f9;
+    border: 1px solid #3f94f9;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    transition: opacity 150ms;
+    cursor: pointer;
+
+    &:hover,
+    &:focus { opacity: 0.7; }
+  }
+}

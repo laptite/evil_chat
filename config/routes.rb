@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "chat#show"
-
-  get "/login",  to: "auth#new"
-  post "/login", to: "auth#create"
 end

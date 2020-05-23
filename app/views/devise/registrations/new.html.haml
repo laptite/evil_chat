@@ -1,0 +1,14 @@
+= c("page") do
+  -# %h2 Sign Up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Enter Email'
+    .field
+      - min_password = @minimum_password_length ? " (#{@minimum_password_length} characters min)" : ''
+      = f.password_field :password, autocomplete: "new-password", placeholder: "Enter Password#{min_password}"
+    .field
+      = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation'
+    .actions
+      = f.submit "Sign up"
+  = render "devise/shared/links"

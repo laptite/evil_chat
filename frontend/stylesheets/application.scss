@@ -1,1 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
+@import "devise";
+
+p.alert, 
+p.notice { 
+  text-align: center; 
+  border-radius: initial;
+  line-height: 2.5em;
+}
+p.alert { background: #ffeded; }
+p.notice { background: #dedede; }
